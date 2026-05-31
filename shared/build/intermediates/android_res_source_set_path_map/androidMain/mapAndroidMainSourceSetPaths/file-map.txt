@@ -1,0 +1,5 @@
+com.androidengineer.tiffunapp.shared-androidMain-0 /Volumes/PersonalData/AndroidProjects/TiffunKMP/shared/build/generated/updated_navigation_xml/androidMain/res
+com.androidengineer.tiffunapp.shared-packageAndroidMainResources-1 /Volumes/PersonalData/AndroidProjects/TiffunKMP/shared/build/intermediates/incremental/androidMain/packageAndroidMainResources/merged.dir
+com.androidengineer.tiffunapp.shared-packageAndroidMainResources-2 /Volumes/PersonalData/AndroidProjects/TiffunKMP/shared/build/intermediates/incremental/androidMain/packageAndroidMainResources/stripped.dir
+com.androidengineer.tiffunapp.shared-packageAndroidMainResources-3 /Volumes/PersonalData/AndroidProjects/TiffunKMP/shared/build/intermediates/packaged_res/androidMain/packageAndroidMainResources/res
+gradleHome-0 /Users/farazzahid/.gradle

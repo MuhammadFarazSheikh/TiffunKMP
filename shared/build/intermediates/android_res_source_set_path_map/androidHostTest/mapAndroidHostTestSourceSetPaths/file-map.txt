@@ -1,0 +1,4 @@
+com.androidengineer.tiffunapp.shared.test.shared-mergeAndroidHostTestResources-0 /Volumes/PersonalData/AndroidProjects/TiffunKMP/shared/build/intermediates/incremental/androidHostTest/mergeAndroidHostTestResources/merged.dir
+com.androidengineer.tiffunapp.shared.test.shared-mergeAndroidHostTestResources-1 /Volumes/PersonalData/AndroidProjects/TiffunKMP/shared/build/intermediates/incremental/androidHostTest/mergeAndroidHostTestResources/stripped.dir
+com.androidengineer.tiffunapp.shared.test.shared-androidHostTest-2 /Volumes/PersonalData/AndroidProjects/TiffunKMP/shared/build/intermediates/merged_res/androidHostTest/mergeAndroidHostTestResources
+gradleHome-0 /Users/farazzahid/.gradle
