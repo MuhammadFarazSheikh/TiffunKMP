@@ -19,7 +19,8 @@
 
     <application
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-        android:debuggable="true" >
+        android:debuggable="true"
+        android:supportsRtl="true" >
         <provider
             android:name="org.jetbrains.compose.resources.AndroidContextProvider"
             android:authorities="com.androidengineer.tiffunapp.shared.test.resources.AndroidContextProvider"

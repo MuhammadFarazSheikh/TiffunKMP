@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.androidengineer.tiffunapp.shared.test.shared-mergeAndroidHostTestResources-31:/values-es/values-es.xml",
+            "outputFile": "com.androidengineer.tiffunapp.shared.test.shared-mergeAndroidHostTestResources-34:/values-es/values-es.xml",
             "map": [
                 {
                     "source": "/Users/farazzahid/.gradle/caches/9.4.1/transforms/c62b703a752a2fc4b371a08094948b27/transformed/foundation/res/values-es/values-es.xml",
@@ -21,6 +21,23 @@
                     }
                 },
                 {
+                    "source": "/Users/farazzahid/.gradle/caches/9.4.1/transforms/8d1ca6701ff9a0c04d1fd298738f2a2f/transformed/core-1.18.0/res/values-es/values-es.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "55,154,256,356,454,561,667,787",
+                        "endColumns": "98,101,99,97,106,105,119,100",
+                        "endOffsets": "149,251,351,449,556,662,782,883"
+                    },
+                    "to": {
+                        "startLines": "4,5,6,7,8,9,10,98",
+                        "startColumns": "4,4,4,4,4,4,4,4",
+                        "startOffsets": "317,416,518,618,716,823,929,10408",
+                        "endColumns": "98,101,99,97,106,105,119,100",
+                        "endOffsets": "411,513,613,711,818,924,1044,10504"
+                    }
+                },
+                {
                     "source": "/Users/farazzahid/.gradle/caches/9.4.1/transforms/6376d288f9333bfba39d8b271889120f/transformed/ui/res/values-es/values-es.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21",
@@ -35,23 +52,6 @@
                         "startOffsets": "216,1049,1145,1227,1325,1428,1517,1596,9658,9750,9837,9923,10014,10091,10176,10252,10332,10509,10591,10661",
                         "endColumns": "100,95,81,97,102,88,78,92,91,86,85,90,76,84,75,79,75,81,69,124",
                         "endOffsets": "312,1140,1222,1320,1423,1512,1591,1684,9745,9832,9918,10009,10086,10171,10247,10327,10403,10586,10656,10781"
-                    }
-                },
-                {
-                    "source": "/Users/farazzahid/.gradle/caches/9.4.1/transforms/b6788e0269841f21afcb579f9e5d8365/transformed/core-1.16.0/res/values-es/values-es.xml",
-                    "from": {
-                        "startLines": "2,3,4,5,6,7,8,9",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "55,154,256,356,454,561,667,787",
-                        "endColumns": "98,101,99,97,106,105,119,100",
-                        "endOffsets": "149,251,351,449,556,662,782,883"
-                    },
-                    "to": {
-                        "startLines": "4,5,6,7,8,9,10,98",
-                        "startColumns": "4,4,4,4,4,4,4,4",
-                        "startOffsets": "317,416,518,618,716,823,929,10408",
-                        "endColumns": "98,101,99,97,106,105,119,100",
-                        "endOffsets": "411,513,613,711,818,924,1044,10504"
                     }
                 },
                 {

@@ -1,10 +1,14 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml:2:1-22:12
-INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml:2:1-22:12
-INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml:2:1-22:12
-INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml:2:1-22:12
-MERGED from [:shared] /Volumes/PersonalData/AndroidProjects/TiffunApp/shared/build/intermediates/merged_manifest/androidMain/processAndroidMainManifest/AndroidManifest.xml:2:1-7:12
+ADDED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml:2:1-22:12
+INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml:2:1-22:12
+MERGED from [:shared] /Volumes/PersonalData/AndroidProjects/TiffunKMP/shared/build/intermediates/merged_manifest/androidMain/processAndroidMainManifest/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.navigation:navigation-runtime-android:2.9.7] /Users/farazzahid/.gradle/caches/9.4.1/transforms/701b2d008a88075a4dfca6a4c2117c5c/transformed/navigation-runtime-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common-android:2.9.7] /Users/farazzahid/.gradle/caches/9.4.1/transforms/b368ce16ff838b587aefd190f49d2b85/transformed/navigation-common-release/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-compose-android:2.9.7] /Users/farazzahid/.gradle/caches/9.4.1/transforms/8e82afcde2f8aa710536b7d8577a24dc/transformed/navigation-compose-release/AndroidManifest.xml:2:1-7:12
+MERGED from [io.github.joelkanyi:komposecountrycodepicker-android:2.0.4] /Users/farazzahid/.gradle/caches/9.4.1/transforms/67ac005011b5c51548a6f05bb840094a/transformed/komposecountrycodepicker/AndroidManifest.xml:2:1-9:12
 MERGED from [org.jetbrains.compose.components:components-resources-android:1.11.0] /Users/farazzahid/.gradle/caches/9.4.1/transforms/cd620176923a5025dc129679a36cdea3/transformed/library-release/AndroidManifest.xml:2:1-16:12
 MERGED from [androidx.compose.material3:material3-android:1.5.0-alpha17] /Users/farazzahid/.gradle/caches/9.4.1/transforms/72e677d7b0d4f41ae70647cae0a9955c/transformed/material3/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.compose.material:material-ripple-android:1.11.0-rc01] /Users/farazzahid/.gradle/caches/9.4.1/transforms/323a370b2591ac9295e65c278d601c57/transformed/material-ripple/AndroidManifest.xml:2:1-7:12
@@ -70,16 +74,18 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/
 MERGED from [androidx.print:print:1.0.0] /Users/farazzahid/.gradle/caches/9.4.1/transforms/c43f46f49817c8305c4ce6e140504b87/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/farazzahid/.gradle/caches/9.4.1/transforms/ef34b71d85422ce7d19a190c96d4972b/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:2:1-7:12
 	package
-		INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml:4:5-20:19
-INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml:4:5-20:19
+ADDED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml:4:5-20:19
+INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml:4:5-20:19
+MERGED from [io.github.joelkanyi:komposecountrycodepicker-android:2.0.4] /Users/farazzahid/.gradle/caches/9.4.1/transforms/67ac005011b5c51548a6f05bb840094a/transformed/komposecountrycodepicker/AndroidManifest.xml:7:5-47
+MERGED from [io.github.joelkanyi:komposecountrycodepicker-android:2.0.4] /Users/farazzahid/.gradle/caches/9.4.1/transforms/67ac005011b5c51548a6f05bb840094a/transformed/komposecountrycodepicker/AndroidManifest.xml:7:5-47
 MERGED from [org.jetbrains.compose.components:components-resources-android:1.11.0] /Users/farazzahid/.gradle/caches/9.4.1/transforms/cd620176923a5025dc129679a36cdea3/transformed/library-release/AndroidManifest.xml:7:5-14:19
 MERGED from [org.jetbrains.compose.components:components-resources-android:1.11.0] /Users/farazzahid/.gradle/caches/9.4.1/transforms/cd620176923a5025dc129679a36cdea3/transformed/library-release/AndroidManifest.xml:7:5-14:19
 MERGED from [androidx.compose.ui:ui-tooling-android:1.11.1] /Users/farazzahid/.gradle/caches/9.4.1/transforms/f943a593487b877c66adebe72ea4fab1/transformed/ui-tooling/AndroidManifest.xml:22:5-26:19
@@ -99,43 +105,51 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/fara
 MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/farazzahid/.gradle/caches/9.4.1/transforms/4b2f660a2ebe636d60c653cc5a895541/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
 MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/farazzahid/.gradle/caches/9.4.1/transforms/4b2f660a2ebe636d60c653cc5a895541/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
 	android:extractNativeLibs
-		INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.18.0] /Users/farazzahid/.gradle/caches/9.4.1/transforms/8d1ca6701ff9a0c04d1fd298738f2a2f/transformed/core-1.18.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml:9:9-35
+		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml:9:9-35
 	android:label
-		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml:7:9-41
+		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml:7:9-41
 	android:roundIcon
-		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml:8:9-54
+		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml:8:9-54
 	android:icon
-		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml:6:9-43
+		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml:6:9-43
 	android:allowBackup
-		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml:5:9-35
+		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml:5:9-35
 	android:theme
-		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml:10:9-72
+		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml:10:9-72
 activity#com.androidengineer.tiffunapp.MainActivity
-ADDED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml:11:9-19:20
+ADDED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml:11:9-19:20
 	android:exported
-		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml:12:13-36
+		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml:12:13-36
 	android:name
-		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml:13:13-41
+		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml:13:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml:14:13-18:29
+ADDED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml:14:13-18:29
 action#android.intent.action.MAIN
-ADDED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml:15:17-69
+ADDED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml:15:17-69
 	android:name
-		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml:15:25-66
+		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml:15:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml:17:17-77
+ADDED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml:17:17-77
 	android:name
-		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml:17:27-74
+		ADDED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml:17:27-74
 uses-sdk
-INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml
-INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml
-MERGED from [:shared] /Volumes/PersonalData/AndroidProjects/TiffunApp/shared/build/intermediates/merged_manifest/androidMain/processAndroidMainManifest/AndroidManifest.xml:5:5-44
-MERGED from [:shared] /Volumes/PersonalData/AndroidProjects/TiffunApp/shared/build/intermediates/merged_manifest/androidMain/processAndroidMainManifest/AndroidManifest.xml:5:5-44
+INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml
+INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml
+MERGED from [:shared] /Volumes/PersonalData/AndroidProjects/TiffunKMP/shared/build/intermediates/merged_manifest/androidMain/processAndroidMainManifest/AndroidManifest.xml:5:5-44
+MERGED from [:shared] /Volumes/PersonalData/AndroidProjects/TiffunKMP/shared/build/intermediates/merged_manifest/androidMain/processAndroidMainManifest/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-runtime-android:2.9.7] /Users/farazzahid/.gradle/caches/9.4.1/transforms/701b2d008a88075a4dfca6a4c2117c5c/transformed/navigation-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-runtime-android:2.9.7] /Users/farazzahid/.gradle/caches/9.4.1/transforms/701b2d008a88075a4dfca6a4c2117c5c/transformed/navigation-runtime-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-android:2.9.7] /Users/farazzahid/.gradle/caches/9.4.1/transforms/b368ce16ff838b587aefd190f49d2b85/transformed/navigation-common-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common-android:2.9.7] /Users/farazzahid/.gradle/caches/9.4.1/transforms/b368ce16ff838b587aefd190f49d2b85/transformed/navigation-common-release/AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-compose-android:2.9.7] /Users/farazzahid/.gradle/caches/9.4.1/transforms/8e82afcde2f8aa710536b7d8577a24dc/transformed/navigation-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [androidx.navigation:navigation-compose-android:2.9.7] /Users/farazzahid/.gradle/caches/9.4.1/transforms/8e82afcde2f8aa710536b7d8577a24dc/transformed/navigation-compose-release/AndroidManifest.xml:5:5-44
+MERGED from [io.github.joelkanyi:komposecountrycodepicker-android:2.0.4] /Users/farazzahid/.gradle/caches/9.4.1/transforms/67ac005011b5c51548a6f05bb840094a/transformed/komposecountrycodepicker/AndroidManifest.xml:5:5-44
+MERGED from [io.github.joelkanyi:komposecountrycodepicker-android:2.0.4] /Users/farazzahid/.gradle/caches/9.4.1/transforms/67ac005011b5c51548a6f05bb840094a/transformed/komposecountrycodepicker/AndroidManifest.xml:5:5-44
 MERGED from [org.jetbrains.compose.components:components-resources-android:1.11.0] /Users/farazzahid/.gradle/caches/9.4.1/transforms/cd620176923a5025dc129679a36cdea3/transformed/library-release/AndroidManifest.xml:5:5-44
 MERGED from [org.jetbrains.compose.components:components-resources-android:1.11.0] /Users/farazzahid/.gradle/caches/9.4.1/transforms/cd620176923a5025dc129679a36cdea3/transformed/library-release/AndroidManifest.xml:5:5-44
 MERGED from [androidx.compose.material3:material3-android:1.5.0-alpha17] /Users/farazzahid/.gradle/caches/9.4.1/transforms/72e677d7b0d4f41ae70647cae0a9955c/transformed/material3/AndroidManifest.xml:20:5-44
@@ -265,9 +279,9 @@ MERGED from [androidx.print:print:1.0.0] /Users/farazzahid/.gradle/caches/9.4.1/
 MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/farazzahid/.gradle/caches/9.4.1/transforms/ef34b71d85422ce7d19a190c96d4972b/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.4.1] /Users/farazzahid/.gradle/caches/9.4.1/transforms/ef34b71d85422ce7d19a190c96d4972b/transformed/annotation-experimental-1.4.1/AndroidManifest.xml:5:5-44
 	android:targetSdkVersion
-		INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunApp/androidApp/src/main/AndroidManifest.xml
+		INJECTED from /Volumes/PersonalData/AndroidProjects/TiffunKMP/androidApp/src/main/AndroidManifest.xml
 provider#org.jetbrains.compose.resources.AndroidContextProvider
 ADDED from [org.jetbrains.compose.components:components-resources-android:1.11.0] /Users/farazzahid/.gradle/caches/9.4.1/transforms/cd620176923a5025dc129679a36cdea3/transformed/library-release/AndroidManifest.xml:8:9-13:20
 	android:enabled

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.androidengineer.tiffunapp.androidApp-mergeDebugResources-34:/values-zh-rTW/values-zh-rTW.xml",
+            "outputFile": "com.androidengineer.tiffunapp.androidApp-mergeDebugResources-37:/values-zh-rTW/values-zh-rTW.xml",
             "map": [
                 {
                     "source": "/Users/farazzahid/.gradle/caches/9.4.1/transforms/72e677d7b0d4f41ae70647cae0a9955c/transformed/material3/res/values-zh-rTW/values-zh-rTW.xml",

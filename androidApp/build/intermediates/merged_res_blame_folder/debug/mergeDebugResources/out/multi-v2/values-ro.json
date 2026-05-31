@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.androidengineer.tiffunapp.androidApp-mergeDebugResources-34:/values-ro/values-ro.xml",
+            "outputFile": "com.androidengineer.tiffunapp.androidApp-mergeDebugResources-37:/values-ro/values-ro.xml",
             "map": [
                 {
                     "source": "/Users/farazzahid/.gradle/caches/9.4.1/transforms/8d1ca6701ff9a0c04d1fd298738f2a2f/transformed/core-1.18.0/res/values-ro/values-ro.xml",
