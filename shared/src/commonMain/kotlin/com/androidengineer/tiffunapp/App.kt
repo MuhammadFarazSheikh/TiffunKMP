@@ -1,18 +1,14 @@
 package com.androidengineer.tiffunapp
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.rememberScrollState
-import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import androidx.navigation.toRoute
 import kotlinx.serialization.Serializable
 
 @Preview
@@ -25,14 +21,30 @@ fun App() {
             navController = navController,
             startDestination = ScreenState.SignupScreenDestination
         ){
-            composable< ScreenState.SignupScreenDestination>{ backStackEntry ->
+            composable<ScreenState.SignupScreenDestination>{ backStackEntry ->
                 UserSignup(onSignupClick = {
                     navController.navigate(ScreenState.PhoneNumberScreenDestination)
                 })
             }
 
-            composable< ScreenState.PhoneNumberScreenDestination>{ backStackEntry ->
-                UserPhoneNumber()
+            composable<ScreenState.PhoneNumberScreenDestination>{ backStackEntry ->
+                UserPhoneNumber(
+                    onNextClick = { countryCode, phoneNumber, countryEmoji ->
+                        navController.navigate(ScreenState.VerifyPhoneNumberScreenDestination(phoneNumber = phoneNumber, countryCode = countryCode, countryEmoji = countryEmoji))
+                    }
+                )
+            }
+
+            composable<ScreenState.VerifyPhoneNumberScreenDestination>{ backStackEntry ->
+                val routeData = backStackEntry.toRoute<ScreenState.VerifyPhoneNumberScreenDestination>()
+                VerifyPhoneNumber(onNextClick = { countryCode, phoneNumber, countryEmoji ->
+                    navController.navigate(ScreenState.UserLogin(phoneNumber = phoneNumber, countryCode = countryCode, countryEmoji = countryEmoji))
+                }, countryCode = routeData.countryCode, phoneNumber = routeData.phoneNumber, countryEmoji = routeData.countryEmoji)
+            }
+
+            composable<ScreenState.UserLogin>{ backStackEntry ->
+                val routeData = backStackEntry.toRoute<ScreenState.UserLogin>()
+                UserLogin(countryCode = routeData.countryCode, phoneNumber = routeData.phoneNumber, routeData.countryEmoji)
             }
         }
     }
@@ -42,4 +54,6 @@ fun App() {
 sealed class ScreenState {
     @Serializable object SignupScreenDestination: ScreenState()
     @Serializable object PhoneNumberScreenDestination: ScreenState()
+    @Serializable data class VerifyPhoneNumberScreenDestination(val phoneNumber: String, val countryCode: String, val countryEmoji: String): ScreenState()
+    @Serializable data class UserLogin(val phoneNumber: String, val countryCode: String, val countryEmoji: String): ScreenState()
 }

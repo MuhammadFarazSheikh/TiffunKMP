@@ -23,7 +23,6 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.jetbrains.compose.resources.painterResource
@@ -43,15 +42,17 @@ import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.withStyle
 
-@Preview
 @Composable
-fun UserPhoneNumber() {
+fun UserPhoneNumber(
+    onNextClick: (String, String, String) -> Unit
+) {
+    var countryCode by remember { mutableStateOf("+92")}
+    var countryFlag by remember { mutableStateOf("🇵🇰")}
     var phoneNumber by remember { mutableStateOf("")}
     val multiColorText = buildAnnotatedString {
-        // 1. Standard dark gray text portion
         withStyle(
             style = SpanStyle(
-                color = Color(0xFF6F7382), // Gray color matching your placeholders
+                color = Color(0xFF6F7382),
                 fontSize = 14.sp,
                 fontWeight = FontWeight.Normal
             )
@@ -59,12 +60,11 @@ fun UserPhoneNumber() {
             append("By pressing Next, I agree to Tiffun's ")
         }
 
-        // 2. The legal text portion styled in your specific Red branding
         withStyle(
             style = SpanStyle(
-                color = Color(0xFFE84B4B), // Your custom red color from your TextField indicator
+                color = Color(0xFFE84B4B),
                 fontSize = 14.sp,
-                fontWeight = FontWeight.Bold // Optional: bolder text makes it stand out as interactive
+                fontWeight = FontWeight.Bold
             )
         ) {
             append("terms and conditions")
@@ -100,13 +100,14 @@ fun UserPhoneNumber() {
             verticalAlignment = Alignment.CenterVertically
         ){
             CountryPicker(
-                onCountrySelected = {
-
+                onCountrySelected = { countryinfo ->
+                    countryCode = countryinfo.phoneCode
+                    countryFlag = countryinfo.flagEmoji
                 }
             )
 
             VerticalDivider(
-                modifier = Modifier.padding(10.dp,0.dp,0.dp,0.dp).height(29.dp),
+                modifier = Modifier.padding(20.dp,0.dp,0.dp,0.dp).height(29.dp),
                 thickness = 0.6.dp,
                 color = Color(0xFFC4C4C4)
             )
@@ -137,8 +138,10 @@ fun UserPhoneNumber() {
         )
 
         TextButton(
-            modifier = Modifier.padding(15.dp,49.dp,15.dp,40.dp).background(color = Color(0xFFE84B4B), shape = RoundedCornerShape(5.dp)).fillMaxWidth().wrapContentHeight(),
-            onClick = {},
+            modifier = Modifier.padding(15.dp,49.dp,15.dp,0.dp).background(color = Color(0xFFE84B4B), shape = RoundedCornerShape(5.dp)).fillMaxWidth().wrapContentHeight(),
+            onClick = {
+                onNextClick.invoke(countryCode, phoneNumber, countryFlag)
+            },
             content = {
                 Text(
                     text = "Next",
@@ -158,20 +161,11 @@ fun UserPhoneNumber() {
     }
 }
 
-// Clean Domain Model
-data class CountryInfo(
-    val code: String,       // e.g. "PK"
-    val phoneCode: String,  // e.g. "+92"
-    val flagEmoji: String   // e.g. "🇵🇰"
-)
-
-// State Saver for configuration changes (like screen rotation)
 val CountryInfoSaver = mapSaver(
     save = { mapOf("code" to it.code, "phoneCode" to it.phoneCode, "flagEmoji" to it.flagEmoji) },
     restore = { CountryInfo(it["code"] as String, it["phoneCode"] as String, it["flagEmoji"] as String) }
 )
 
-// Optimized Single-Instance Data Provider
 object CountryRepository {
     val countries: List<CountryInfo> = listOf(
         CountryInfo("PK", "+92", "🇵🇰"),
@@ -214,7 +208,7 @@ object CountryRepository {
         CountryInfo("PH", "+63", "🇵🇭"),
         CountryInfo("TH", "+66", "🇹🇭"),
         CountryInfo("VN", "+84", "🇻🇳")
-    ).sortedBy { it.code } // Pre-sorted at initialization phase
+    ).sortedBy { it.code }
 }
 
 @Composable
@@ -222,14 +216,14 @@ fun CountryPicker(
     onCountrySelected: (CountryInfo) -> Unit,
     modifier: Modifier = Modifier
 ) {
-    // rememberSaveable ensures the selection survives configuration changes or system theme switches
+
     var selectedCountry by rememberSaveable(stateSaver = CountryInfoSaver) {
         mutableStateOf(CountryRepository.countries.first { it.code == "PK" })
     }
     var isDropdownExpanded by remember { mutableStateOf(false) }
 
     Box(modifier = modifier) {
-        // Trigger Box
+
         Row(
             modifier = Modifier
                 .clickable { isDropdownExpanded = true }
@@ -248,11 +242,10 @@ fun CountryPicker(
             )
         }
 
-        // Overlay Picker Window
         DropdownMenu(
             expanded = isDropdownExpanded,
             onDismissRequest = { isDropdownExpanded = false },
-            modifier = Modifier.heightIn(max = 260.dp) // Bound height limit natively
+            modifier = Modifier.heightIn(max = 260.dp)
         ) {
             CountryRepository.countries.forEach { country ->
                 DropdownMenuItem(
@@ -272,7 +265,7 @@ fun CountryPicker(
                     onClick = {
                         selectedCountry = country
                         isDropdownExpanded = false
-                        onCountrySelected(country) // Emit update up to parent cleanly
+                        onCountrySelected(country)
                     },
                     contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp)
                 )

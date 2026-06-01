@@ -1,0 +1,21 @@
+# Gradle / Kotlin
+.gradle/
+build/
+**/build/
+local.properties
+
+# Android
+*.apk
+*.aab
+*.dex
+captures/
+.externalNativeBuild/
+
+# iOS / Xcode
+*.xcuserstate
+xcuserdata/
+DerivedData/
+
+# IDE
+.idea/
+*.iml
