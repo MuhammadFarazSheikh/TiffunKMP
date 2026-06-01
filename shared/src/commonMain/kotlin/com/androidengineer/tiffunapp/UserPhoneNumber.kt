@@ -41,6 +41,7 @@ import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.withStyle
+import kotlinx.serialization.Serializable
 
 @Composable
 fun UserPhoneNumber(
@@ -273,3 +274,10 @@ fun CountryPicker(
         }
     }
 }
+
+@Serializable
+data class CountryInfo(
+    val code: String = "",
+    val phoneCode: String = "",
+    val flagEmoji: String = ""
+)
