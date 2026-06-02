@@ -44,7 +44,14 @@ fun App() {
 
             composable<ScreenState.UserLogin>{ backStackEntry ->
                 val routeData = backStackEntry.toRoute<ScreenState.UserLogin>()
-                UserLogin(countryCode = routeData.countryCode, phoneNumber = routeData.phoneNumber, routeData.countryEmoji)
+                UserLogin(onLoginClicked = {
+                    navController.navigate(ScreenState.PersonalDetails)
+                }, countryCode = routeData.countryCode, phoneNumber = routeData.phoneNumber, routeData.countryEmoji)
+            }
+
+            composable<ScreenState.PersonalDetails>{ backStackEntry ->
+                val routeData = backStackEntry.toRoute<ScreenState.PersonalDetails>()
+                PersonalDetails()
             }
         }
     }
@@ -56,4 +63,5 @@ sealed class ScreenState {
     @Serializable object PhoneNumberScreenDestination: ScreenState()
     @Serializable data class VerifyPhoneNumberScreenDestination(val phoneNumber: String, val countryCode: String, val countryEmoji: String): ScreenState()
     @Serializable data class UserLogin(val phoneNumber: String, val countryCode: String, val countryEmoji: String): ScreenState()
+    @Serializable object PersonalDetails: ScreenState()
 }

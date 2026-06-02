@@ -37,6 +37,7 @@ import tiffunapp.shared.generated.resources.tiffun
 
 @Composable
 fun UserLogin(
+    onLoginClicked: () -> Unit,
     countryCode: String,
     phoneNumber: String,
     countryEmoji: String
@@ -130,6 +131,7 @@ fun UserLogin(
         TextButton(
             modifier = Modifier.padding(15.dp,42.27.dp,15.dp,0.dp).background(color = Color(0xFFE84B4B), shape = RoundedCornerShape(5.dp)).fillMaxWidth().wrapContentHeight(),
             onClick = {
+                onLoginClicked.invoke()
             },
             content = {
                 Text(
