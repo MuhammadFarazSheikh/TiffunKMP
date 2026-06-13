@@ -23,16 +23,15 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.input.PasswordVisualTransformation
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.jetbrains.compose.resources.painterResource
 import tiffunapp.shared.generated.resources.Res
 import tiffunapp.shared.generated.resources.tiffun
-
-@Preview
 @Composable
-fun PersonalDetails() {
+fun PersonalDetails(
+    onNextClick: () -> Unit
+) {
     var name by remember { mutableStateOf("") }
     var email by remember { mutableStateOf("") }
     var organization by remember { mutableStateOf("") }
@@ -172,6 +171,7 @@ fun PersonalDetails() {
         TextButton(
             modifier = Modifier.padding(15.dp,42.27.dp,15.dp,0.dp).background(color = Color(0xFFE84B4B), shape = RoundedCornerShape(5.dp)).fillMaxWidth().wrapContentHeight(),
             onClick = {
+                onNextClick.invoke()
             },
             content = {
                 Text(
