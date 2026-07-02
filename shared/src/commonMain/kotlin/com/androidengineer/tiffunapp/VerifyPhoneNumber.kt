@@ -67,7 +67,7 @@ fun VerifyPhoneNumber(
         Image(
             painterResource(Res.drawable.tiffun),
             contentDescription = "",
-            modifier = Modifier.padding(13.07.dp,48.dp,0.dp,0.dp)
+            modifier = Modifier.padding(13.07.dp,83.dp,0.dp,0.dp)
         )
 
         Text(

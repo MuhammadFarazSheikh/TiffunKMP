@@ -49,7 +49,7 @@ fun UserSignup(
             .fillMaxSize()
     ) {
         Row (
-            modifier = Modifier.padding(13.dp,48.dp,0.dp,0.dp).wrapContentSize()
+            modifier = Modifier.padding(13.dp,83.dp,0.dp,0.dp).wrapContentSize()
         ){
             Image(
                 painterResource(Res.drawable.tiffun),

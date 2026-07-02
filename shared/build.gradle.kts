@@ -31,6 +31,9 @@ kotlin {
         pod("GoogleMaps") {
             version = "9.0.0"
         }
+        pod("GooglePlaces") {
+            version = "9.0.0"
+        }
     }
 
     listOf(
@@ -69,9 +72,6 @@ kotlin {
                 implementation(libs.navigation.compose)
                 implementation(libs.kotlinx.serialization.json)
                 implementation(libs.kmp.maps.compose)
-                implementation(libs.ktor.client.core)
-                implementation(libs.ktor.client.content.negotiation)
-                implementation(libs.ktor.serialization.kotlinx.json)
                 implementation(libs.koin.core)
                 implementation(libs.koin.compose)
                 implementation(libs.koin.compose.viewmodel)
@@ -80,21 +80,9 @@ kotlin {
 
         val androidMain by getting {
             dependencies {
-                implementation(libs.ktor.client.cio)
+                implementation(libs.google.places)
+                implementation(libs.koin.android.lib)
             }
-        }
-
-        val iosMain by creating {
-            dependsOn(commonMain)
-            dependencies {
-                implementation(libs.ktor.client.darwin)
-            }
-        }
-        val iosArm64Main by getting {
-            dependsOn(iosMain)
-        }
-        val iosSimulatorArm64Main by getting {
-            dependsOn(iosMain)
         }
     }
 }

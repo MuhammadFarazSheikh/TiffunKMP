@@ -4,11 +4,11 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
 class SearchRepository (
-    private val placesService: PlacesService
+    private val placesSearch: PlacesSearch
 ) {
 
     fun searchResults(query: String): Flow<Place> = flow {
-        val results = placesService.searchAddress(query)
+        val results = placesSearch.searchAddress(query)
 
         try {
             if (results.isNotEmpty()) {

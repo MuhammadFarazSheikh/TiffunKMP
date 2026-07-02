@@ -1,35 +1,23 @@
 package com.androidengineer.tiffunapp
 
-import io.ktor.client.HttpClient
 import org.koin.dsl.module
-import io.ktor.client.plugins.contentnegotiation.*
-import io.ktor.serialization.kotlinx.json.*
-import kotlinx.serialization.json.Json
 import org.koin.core.context.startKoin
+import org.koin.core.module.Module
 import org.koin.core.module.dsl.viewModelOf
-import kotlin.math.sin
+import org.koin.dsl.KoinAppDeclaration
 
 val appModule = module {
-    single {
-        HttpClient {
-            install(ContentNegotiation) {
-                json(Json {
-                    ignoreUnknownKeys = true
-                })
-            }
-        }
-    }
-
-    // Inject the key from a BuildConfig or environment variable
-    single { PlacesService(get(), "AIzaSyDNyXv62WPLJGlb3SL5AHEw8CvRbTaL6cc") }
-
+    includes(platformModule)
     single { SearchRepository(get()) }
     viewModelOf(::SearchViewModel)
 }
 
+expect val platformModule: Module
+
 // In commonMain
-fun initKoin() {
+fun initKoin(appDeclaration: KoinAppDeclaration = {}) {
     startKoin {
+        appDeclaration()
         modules(appModule)
     }
 }

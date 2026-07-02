@@ -16,6 +16,9 @@
   "dependencies": {
     "GoogleMaps": [
       "9.0.0"
+    ],
+    "GooglePlaces": [
+      "9.0.0"
     ]
   },
   "xcconfig": {

@@ -10,7 +10,7 @@ fun MainViewController(): UIViewController {
     // 1. Provide the API key immediately when the controller is requested
     GMSServices.provideAPIKey("AIzaSyACdqXM8yUKfC1P4J07xteYnn9vM-5jAcY")
 
-    initKoin()
+    initKoin { }
 
     // 2. Return the Compose UI
     return ComposeUIViewController {

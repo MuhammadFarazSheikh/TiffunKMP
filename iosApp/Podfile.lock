@@ -4,8 +4,10 @@ PODS:
   - GoogleMaps/Base (9.0.0)
   - GoogleMaps/Maps (9.0.0):
     - GoogleMaps/Base
+  - GooglePlaces (9.0.0)
   - shared (1.0-SNAPSHOT):
     - GoogleMaps (= 9.0.0)
+    - GooglePlaces (= 9.0.0)
 
 DEPENDENCIES:
   - shared (from `../shared`)
@@ -13,6 +15,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - GoogleMaps
+    - GooglePlaces
 
 EXTERNAL SOURCES:
   shared:
@@ -20,7 +23,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   GoogleMaps: 4907d0d42bf8cd58f56743e31f91d23c10682745
-  shared: 997e44611d8b02f34aca8f7305c31e202e39c775
+  GooglePlaces: cf1f5b61297da7ac64bcb147cfa7b435d74ed6d9
+  shared: 897ba1db105f4a7094f47e08c03728927ab024a5
 
 PODFILE CHECKSUM: 7ac16c6af4a9275d2d1ea24ca4cdce654933a217
 

@@ -2,6 +2,7 @@ package com.androidengineer.tiffunapp
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.Job
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -14,8 +15,11 @@ class SearchViewModel(
     private val mutableStateFlow = MutableStateFlow<Place>(Place())
     val stateFlow: StateFlow<Place> = mutableStateFlow.asStateFlow()
 
+    private var searchJob: Job? = null
+
     fun searchResults(query: String) {
-        viewModelScope.launch {
+        searchJob?.cancel()
+        searchJob = viewModelScope.launch {
             searchRepository.searchResults(query).collect { result ->
                 mutableStateFlow.value = result
             }
