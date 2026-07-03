@@ -14,6 +14,6 @@ fun MainViewController(): UIViewController {
 
     // 2. Return the Compose UI
     return ComposeUIViewController {
-        App()
+        SplashScreen()
     }
 }

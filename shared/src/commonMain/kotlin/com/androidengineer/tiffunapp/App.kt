@@ -69,7 +69,16 @@ fun App() {
 
             composable<ScreenState.GetStarted>{ backStackEntry ->
                 val routeData = backStackEntry.toRoute<ScreenState.GetStarted>()
-                GetStarted()
+                GetStarted(
+                    aboutFaqsTermsClick = {
+                        navController.navigate(ScreenState.TermsAboutFAQS)
+                    }
+                )
+            }
+
+            composable<ScreenState.TermsAboutFAQS>{ backStackEntry ->
+                val routeData = backStackEntry.toRoute<ScreenState.TermsAboutFAQS>()
+                AboutTermsFAQs()
             }
         }
     }
@@ -84,4 +93,5 @@ sealed class ScreenState {
     @Serializable object PersonalDetails: ScreenState()
     @Serializable object WorkAddress: ScreenState()
     @Serializable object GetStarted: ScreenState()
+    @Serializable object TermsAboutFAQS: ScreenState()
 }

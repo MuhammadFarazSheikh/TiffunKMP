@@ -2,6 +2,7 @@ package com.androidengineer.tiffunapp
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -27,7 +28,6 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import org.jetbrains.compose.resources.painterResource
@@ -43,9 +43,10 @@ import tiffunapp.shared.generated.resources.image_three
 import tiffunapp.shared.generated.resources.image_two
 import tiffunapp.shared.generated.resources.tiffun
 
-@Preview
 @Composable
-fun GetStarted() {
+fun GetStarted(
+    aboutFaqsTermsClick: () -> Unit
+) {
     Column (
         modifier = Modifier.background(color = Color.White).verticalScroll(rememberScrollState()).fillMaxSize()
     ){
@@ -338,68 +339,74 @@ fun GetStarted() {
             )
         }
 
-        Image(
-            modifier = Modifier.align(alignment = Alignment.CenterHorizontally).padding(0.dp,34.dp,0.dp,0.dp),
-            painter = painterResource(Res.drawable.tiffun),
-            contentDescription = ""
-        )
-
-        Text(
-            modifier = Modifier.align(alignment = Alignment.CenterHorizontally).padding(0.dp,20.dp,0.dp,0.dp),
-            text = "Copyright 2019, All Rights Reserved",
-            fontSize = 16.sp,
-            fontWeight = FontWeight.Bold,
-            color = Color(0XFF6F7382)
-        )
-
-        Row (
-            modifier = Modifier.wrapContentSize().align(alignment = Alignment.CenterHorizontally).padding(0.dp,29.dp,0.dp,0.dp),
-        ) {
-
-            Text(
-                modifier = Modifier.wrapContentSize(),
-                text = "About",
-                fontSize = 14.sp,
-                color = Color(0xFF6F7382)
-            )
-
-            Text(
-                modifier = Modifier.wrapContentSize().padding(15.dp,0.dp,0.dp,0.dp),
-                text = "Terms",
-                fontSize = 14.sp,
-                color = Color(0xFF6F7382)
-            )
-
-            Text(
-                modifier = Modifier.wrapContentSize().padding(15.dp,0.dp,0.dp,0.dp),
-                text = "FAQs",
-                fontSize = 14.sp,
-                color = Color(0xFF6F7382)
-            )
-
-        }
-
-        Text(
-            modifier = Modifier.align(alignment = Alignment.CenterHorizontally).padding(0.dp,37.dp,0.dp,0.dp),
-            text = "Download the Tiffun Application",
-            fontSize = 18.sp,
-            fontWeight = FontWeight.Bold,
-            color = Color(0XFF363B52)
-        )
-
-        Row (
-            modifier = Modifier.wrapContentSize().align(alignment = Alignment.CenterHorizontally).padding(0.dp,15.dp,0.dp,50.dp),
-        ) {
+        Column (
+            modifier = Modifier.fillMaxSize().padding(0.dp,35.dp,0.dp,0.dp).background(color = Color.White)
+        ){
             Image(
-                painter = painterResource(Res.drawable.download_app_store),
+                modifier = Modifier.align(alignment = Alignment.CenterHorizontally).padding(0.dp,34.dp,0.dp,0.dp),
+                painter = painterResource(Res.drawable.tiffun),
                 contentDescription = ""
             )
 
-            Image(
-                modifier = Modifier.wrapContentSize().padding(17.dp,0.dp,0.dp,0.dp),
-                painter = painterResource(Res.drawable.download_play_store),
-                contentDescription = ""
+            Text(
+                modifier = Modifier.align(alignment = Alignment.CenterHorizontally).padding(0.dp,20.dp,0.dp,0.dp),
+                text = "Copyright 2019, All Rights Reserved",
+                fontSize = 16.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color(0XFF6F7382)
             )
+
+            Row (
+                modifier = Modifier.clickable(onClick = {
+                    aboutFaqsTermsClick()
+                }).wrapContentSize().align(alignment = Alignment.CenterHorizontally).padding(0.dp,29.dp,0.dp,0.dp),
+            ) {
+
+                Text(
+                    modifier = Modifier.wrapContentSize(),
+                    text = "About",
+                    fontSize = 14.sp,
+                    color = Color(0xFF6F7382)
+                )
+
+                Text(
+                    modifier = Modifier.wrapContentSize().padding(15.dp,0.dp,0.dp,0.dp),
+                    text = "Terms",
+                    fontSize = 14.sp,
+                    color = Color(0xFF6F7382)
+                )
+
+                Text(
+                    modifier = Modifier.wrapContentSize().padding(15.dp,0.dp,0.dp,0.dp),
+                    text = "FAQs",
+                    fontSize = 14.sp,
+                    color = Color(0xFF6F7382)
+                )
+
+            }
+
+            Text(
+                modifier = Modifier.align(alignment = Alignment.CenterHorizontally).padding(0.dp,37.dp,0.dp,0.dp),
+                text = "Download the Tiffun Application",
+                fontSize = 18.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color(0XFF363B52)
+            )
+
+            Row (
+                modifier = Modifier.wrapContentSize().align(alignment = Alignment.CenterHorizontally).padding(0.dp,15.dp,0.dp,50.dp),
+            ) {
+                Image(
+                    painter = painterResource(Res.drawable.download_app_store),
+                    contentDescription = ""
+                )
+
+                Image(
+                    modifier = Modifier.wrapContentSize().padding(17.dp,0.dp,0.dp,0.dp),
+                    painter = painterResource(Res.drawable.download_play_store),
+                    contentDescription = ""
+                )
+            }
         }
     }
 }
